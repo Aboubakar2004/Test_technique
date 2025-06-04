@@ -1,9 +1,17 @@
+import Header from "@/components/Header";
+import LandingPage from "@/components/LandingPage";
+import Descritpion from "@/components/Descritpion";
+import Card from "@/components/Card";
+
 export default function Home() {
   return (
-    <div className="">
-      <div>
-        <h1>Ceci est la page d'acceuil de notre site</h1>
+    <main className="min-h-screen bg-white">
+      <Header />
+      <div className="max-w-7xl mx-auto px-6">
+        <LandingPage />
+        <Descritpion />
+        <Card />
       </div>
-    </div>
+    </main>
   );
 }
