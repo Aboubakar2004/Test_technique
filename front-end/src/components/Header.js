@@ -12,7 +12,6 @@ function Header() {
     <nav className="relative bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center py-4">
-          {/* Logo */}
           <div className="flex items-center">
             <Image
               src={Logo}
@@ -24,7 +23,6 @@ function Header() {
             />
           </div>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <a href="#" className="text-gray-600 hover:text-gray-900">
               Prêt
@@ -51,7 +49,6 @@ function Header() {
             </div>
           </div>
 
-          {/* Mobile menu button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -67,7 +64,6 @@ function Header() {
         </div>
       </div>
 
-      {/* Mobile Navigation */}
       {isOpen && (
         <div className="md:hidden absolute w-full bg-white shadow-lg z-50">
           <div className="px-4 pt-2 pb-4 space-y-3">

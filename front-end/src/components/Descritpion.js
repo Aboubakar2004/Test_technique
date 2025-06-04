@@ -6,7 +6,6 @@ function Descritpion() {
     <section className="w-screen bg-gray-50 relative left-[49%] right-[50%] ml-[-50vw] mr-[-50vw] mt-20 sm:mt-40 lg:mt-60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12 lg:py-16">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-60">
-          {/* Navigation tabs */}
           <div className="flex lg:flex-col gap-4 lg:gap-6 lg:w-1/4">
             <div className="flex items-center gap-2 cursor-pointer group">
               <h2 className="text-emerald-500 text-lg sm:text-xl lg:text-2xl font-medium group-hover:translate-x-1 transition-transform">
@@ -22,7 +21,6 @@ function Descritpion() {
             </div>
           </div>
 
-          {/* Content */}
           <div className="flex flex-col gap-8 lg:w-3/4">
             <p className="text-gray-600 text-base sm:text-lg">
               Des taux compétitifs en quelques clics. Quel que soit votre
