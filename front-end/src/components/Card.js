@@ -3,13 +3,15 @@ import {
   CircleDollarSign,
   Clock,
   MessageCircleQuestion,
+  Settings,
 } from "lucide-react";
 import React from "react";
+import Link from "next/link";
 
 function Card() {
   return (
     <div className="mt-28 mb-28">
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-2 gap-6 mb-8">
         <div className="p-8 border border-gray-200 rounded-lg shadow shadow-gray-200 h-[250px]">
           <div className="bg-[#d5f5e5] p-2 rounded-lg w-fit mb-4">
             <CheckCircle2 className="text-[#31cf83] w-6 h-6" />
@@ -66,6 +68,16 @@ function Card() {
             traitement automatisé de vos demandes.
           </p>
         </div>
+      </div>
+
+      <div className="flex justify-end">
+        <Link
+          href="/backoffice"
+          className="flex items-center gap-2 px-3 py-2 text-gray-500 hover:text-gray-700 transition-colors group rounded-md hover:bg-gray-50"
+        >
+          <Settings className="w-5 h-5 group-hover:rotate-90 transition-transform duration-300" />
+          <span className="text-sm">Backoffice</span>
+        </Link>
       </div>
     </div>
   );
