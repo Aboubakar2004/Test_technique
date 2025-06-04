@@ -20,7 +20,7 @@ function Card() {
           <p className="text-gray-600">
             Plus de mauvaises surprises lors de la facturation de votre client.
             Chez Liqtrade, nous évaluons son risque débiteur afin de permettre
-            la valorisation et l'acceptation rapide de votre facture.
+            la valorisation et l&apos;acceptation rapide de votre facture.
           </p>
         </div>
 
@@ -34,7 +34,7 @@ function Card() {
           <p className="text-gray-600">
             Nos algorithmes trouvent pour vous la meilleure offre de financement
             en termes de prix et de taux de commission. En moyenne, nos clients
-            perçoivent jusqu'à 97 % de la valeur nominale de leur facture.
+            perçoivent jusqu&apos;à 97 % de la valeur nominale de leur facture.
           </p>
         </div>
 
@@ -61,9 +61,9 @@ function Card() {
             Financez vos besoins de trésorerie en temps réel
           </h1>
           <p className="text-gray-600">
-            Faites une demande de financement en ligne via l'envoi électronique
-            de facture et obtenez plus rapidement vos fonds via un traitement
-            automatisé de vos demandes.
+            Faites une demande de financement en ligne via l&apos;envoi
+            électronique de facture et obtenez plus rapidement vos fonds via un
+            traitement automatisé de vos demandes.
           </p>
         </div>
       </div>
