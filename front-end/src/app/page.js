@@ -5,7 +5,7 @@ import Card from "@/components/Card";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-[#f8f4fc]">
       <Header />
       <div className="max-w-7xl mx-auto px-6">
         <LandingPage />
