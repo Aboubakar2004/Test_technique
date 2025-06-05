@@ -19,7 +19,7 @@ function DashBoardHeader() {
           className="rounded-full size-14 object-cover"
         />
       </div>
-      <div className="flex justify-between items-center">
+      <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-4">
         <div className="inline-flex p-1 bg-gray-100 rounded-lg">
           <button
             onClick={() => setActiveTab("prets")}
@@ -43,7 +43,7 @@ function DashBoardHeader() {
           </button>
         </div>
         <div>
-          <button className="px-6 py-2.5 bg-blue-800 text-white rounded-lg font-medium hover:bg-blue-900 transition-colors">
+          <button className="w-full lg:w-auto px-6 py-2.5 bg-blue-800 text-white rounded-lg font-medium hover:bg-blue-900 transition-colors">
             Demander un financement
           </button>
         </div>

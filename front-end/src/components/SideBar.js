@@ -10,7 +10,7 @@ import { IoNotificationsOutline } from "react-icons/io5";
 
 function SideBar() {
   return (
-    <div className="h-11/12 w-96 bg-white shadow-lg p-6">
+    <div className="h-screen w-[300px] bg-white shadow-lg p-6">
       <div className="flex flex-col h-full">
         <div className="mb-10 flex items-center justify-center">
           <Image
@@ -19,7 +19,7 @@ function SideBar() {
             width={150}
             height={50}
             priority
-            className="object-contain "
+            className="object-contain w-32 lg:w-auto"
           />
         </div>
 
@@ -57,17 +57,17 @@ function SideBar() {
               <span>Réglages</span>
             </button>
           </div>
-          <div className="flex items-center gap-2 mt-50 p-3">
+          <div className="flex items-center gap-2 mt-auto p-3">
             <Image
               src={Picture}
               alt="Logo"
-              className="rounded-full size-14 object-cover"
+              className="rounded-full w-12 h-12 object-cover"
             />
             <div className="flex flex-col gap-2">
-              <p className="font-bold">Paul Dumartin</p>
-              <p>
-                Statut Vérification KYC :
-                <span className="text-green-500">Valide</span>
+              <p className="font-bold text-sm">Paul Dumartin</p>
+              <p className="text-xs flex ">
+                Statut Vérification KYC:
+                <span className="text-green-500 ml-1">Valide</span>
               </p>
             </div>
           </div>

@@ -210,9 +210,9 @@ function FinancialInformation() {
   return (
     <div className="mt-8">
       <h2 className="text-2xl font-bold mb-4">Informations financières</h2>
-      <div className="flex gap-6">
-        <div className="bg-white rounded-xl p-6" style={{ width: "500px" }}>
-          <div className="h-[250px]">
+      <div className="flex flex-col lg:flex-row gap-6">
+        <div className="bg-white rounded-xl p-6 w-full lg:w-[500px]">
+          <div className="h-[250px] mr-12">
             <ResponsiveContainer width="100%" height="100%">
               <LineChart
                 data={data}
@@ -271,13 +271,13 @@ function FinancialInformation() {
           </div>
         </div>
 
-        <div className="bg-white rounded-xl p-6" style={{ width: "900px" }}>
-          <div className="flex justify-between mb-6 bg-[#f7f8fb]">
+        <div className="bg-white rounded-xl p-6 w-full lg:w-[900px]">
+          <div className="flex justify-between mb-6 bg-[#f7f8fb] overflow-x-auto">
             {tabs.map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`px-4 py-2 rounded-lg text-sm transition-colors ${
+                className={`px-4 py-2 rounded-lg text-sm transition-colors whitespace-nowrap ${
                   activeTab === tab
                     ? "bg-[#d0d4f8] text-[#4b4d9b] font-medium"
                     : "text-gray-500"
@@ -287,45 +287,47 @@ function FinancialInformation() {
               </button>
             ))}
           </div>
-          <table className="w-full text-sm">
-            <thead>
-              <tr className="border-b border-gray-200">
-                <th className="text-left py-2 font-bold text-[#4b4d9b]">
-                  Tenor
-                </th>
-                <th className="text-left py-2 font-bold text-[#4b4d9b]">
-                  Market Place
-                </th>
-                <th className="text-left py-2 font-bold text-[#4b4d9b]">
-                  Market Risk Free
-                </th>
-                <th className="text-left py-2 font-bold text-[#4b4d9b]">
-                  Market Risk Free Premium
-                </th>
-                <th className="text-left py-2  font-bold text-[#4b4d9b]">
-                  Change %
-                </th>
-                <th className="text-left py-2  font-bold text-[#4b4d9b]">
-                  Variation
-                </th>
-              </tr>
-            </thead>
-            <tbody className="transition-all duration-300 ease-in-out">
-              {tableDataSets[activeTab].map((row, index) => (
-                <tr
-                  key={index}
-                  className="border-b border-gray-200 last:border-0 transition-all duration-300 ease-in-out hover:bg-gray-50"
-                >
-                  <td className="py-3">{row.tenor}</td>
-                  <td className="py-3">{row.marketPlace}</td>
-                  <td className="py-3">{row.riskFree}</td>
-                  <td className="py-3">{row.riskFreePremium}</td>
-                  <td className="py-3">{row.change}</td>
-                  <td className="py-3">{row.variation}</td>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-gray-200">
+                  <th className="text-left py-2 font-bold text-[#4b4d9b]">
+                    Tenor
+                  </th>
+                  <th className="text-left py-2 font-bold text-[#4b4d9b]">
+                    Market Place
+                  </th>
+                  <th className="text-left py-2 font-bold text-[#4b4d9b]">
+                    Market Risk Free
+                  </th>
+                  <th className="text-left py-2 font-bold text-[#4b4d9b]">
+                    Market Risk Free Premium
+                  </th>
+                  <th className="text-left py-2 font-bold text-[#4b4d9b]">
+                    Change %
+                  </th>
+                  <th className="text-left py-2 font-bold text-[#4b4d9b]">
+                    Variation
+                  </th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody className="transition-all duration-300 ease-in-out">
+                {tableDataSets[activeTab].map((row, index) => (
+                  <tr
+                    key={index}
+                    className="border-b border-gray-200 last:border-0 transition-all duration-300 ease-in-out hover:bg-gray-50"
+                  >
+                    <td className="py-3">{row.tenor}</td>
+                    <td className="py-3">{row.marketPlace}</td>
+                    <td className="py-3">{row.riskFree}</td>
+                    <td className="py-3">{row.riskFreePremium}</td>
+                    <td className="py-3">{row.change}</td>
+                    <td className="py-3">{row.variation}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
